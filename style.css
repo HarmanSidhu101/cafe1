@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Flamenco', cursive;
+}
+body{
+    font-size: 20px;
+    overflow-x: hidden;
+}
+/* .clearfix::after{
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+} */
+.logo{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    margin: 20px;
+    float: left;
+}
+/* .logo:hover{
+
+} */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(126, 70, 70, 0.5)), url(cafe2.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.mnav{
+    margin-top: 50px;
+    /* transition: 5s; */
+}
+.mnav li{
+    display: inline-block;
+    margin-left: 100px;
+    list-style: none;
+}
+.mnav li a{
+    color: azure;
+    font-weight: lighter;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 90%;
+}
+/* .mnav a:hover{
+    border-bottom: 2px solid purple;
+} */
+.mnav li a::after{
+    content: "";
+    margin: auto;
+    width: 0;
+    display: block;
+    border-bottom: 2px solid brown;
+    transition: 1s;
+}
+.mnav li a:hover::after{
+    width: 100%;
+}
+.mcontent{
+    color: azure;
+    width: 90%;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.mcontent h1{
+    font-weight: lighter;
+    font-size: 50px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    /* margin-bottom: 20px; */
+}
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 200px;
+    font-weight: lighter;
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+}
+.btnone{
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    margin-right: 15px;   
+}
+.btntwo{
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-right: 15px;   
+}
+.btnone:hover{
+    background-color: #fff;
+}
+.btntwo:hover{
+    background-color: black;
+}
+.colorchange{
+    animation: mycafe 1s infinite;
+    animation-direction: alternate;
+}
+
+.bicon{
+    display: none;
+}
+@keyframes mycafe {
+    0%{color: red;}
+    33%{color: #bf55ec;}
+    66%{color: white;}
+    100%{color: #bf55ec;}
+}
+@media (max-width:1180px) {
+    .mcontent{
+        width: 100%;
+        padding: 0.2%;
+    }
+}
+@media (max-width:998px) {
+    .mcontent h1{
+        font-size: 45px;
+    }
+}
+@media (max-width:850px) {
+    .mcontent{
+        margin: 10px;
+    }
+    .mcontent h1{
+        font-size: 40px;
+    }
+    .mnav{
+        display: none;
+        /* float: left; */
+    }
+    .bicon{
+        display: block;
+        margin:30px;
+        cursor: pointer;
+    }
+    .mnav li{
+        display: block;
+    }
+}
